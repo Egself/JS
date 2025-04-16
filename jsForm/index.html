@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-Form</title>
+</head>
+<body>
+    
+    <form id="kullaniciFormu">
+        <input type="text" id="ad" placeholder="Adinizi Yaziniz">
+        <br> <br>
+        <select id="renk">
+            <option value="0">Seçiniz</option>
+            <option value="kirmizi">Kırmızı</option>
+            <option value="mavi">Mavi</option>
+            <option value="yesil">Yeşil</option>
+        </select>
+        <br> <br>
+        <input type="checkbox" id="sozlesme">
+        Sözleşmeyi kabul ediyorum
+        <br> <br>
+        <button type="submit">Gönder</button>
+
+    </form>
+
+    <script>
+        let form = document.getElementById("kullaniciFormu");
+        form.addEventListener("submit",(e) => {
+            e.preventDefault();
+            let adDiv = document.getElementById("ad");
+            let ad = adDiv.value;
+            console.log("Kullanıcı Adi:",ad);
+            adDiv.value = "";
+        });
+    </script>
+
+</body>
+</html>
